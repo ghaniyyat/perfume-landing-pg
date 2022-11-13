@@ -1,0 +1,283 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header {
+    /* position: absolute;
+    left: 0;
+    right: 0; */
+    padding: 10px 0;
+    background-color: pink;
+    opacity: 0.9;
+}
+
+nav {
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 960px;
+    margin: auto;
+    padding: 0 10px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+}
+
+nav ul li {
+    list-style-type: none;
+    margin-left: 5rem;
+    padding: 20px 0;
+}
+
+nav a {
+    text-decoration: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.landing-page {
+    background: url(../images/imag-bg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    /* background-color: pink; */
+    position: relative;
+    height: 80vh;
+    /* z-index: 1; */
+}
+
+.landing-page::before {
+    content: "";
+    position: absolute;
+    background-color: pink;
+    opacity: 0.9;
+    inset: 0;
+}
+
+ul,
+li,
+a,
+h2,
+h3,
+p {
+    color: black;
+}
+
+
+/* 
+nav h1 {
+    font-family: monospace;
+    font-size: 30px;
+} */
+
+
+/* .about-pg {
+    width: 100%;
+    justify-content: space-between;
+} */
+
+.about {
+    width: 60%;
+    margin-top: 14rem;
+    z-index: 2;
+    padding-bottom: 30px;
+}
+
+h2 {
+    font-size: 38px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+p {
+    font-size: 22px;
+    padding-bottom: 7px;
+    font-weight: 500;
+}
+
+.about-img {
+    width: 35%;
+    /* height: auto; */
+    z-index: 2;
+    margin-top: 1rem;
+}
+
+
+/* .discount p {
+        font-weight: 700;
+} */
+
+.bg {
+    background-color: pink;
+    opacity: 0.9;
+}
+
+#variety>h2 {
+    padding-top: 70px;
+    text-align: center;
+}
+
+.item-container {
+    width: 100%;
+    gap: 20px;
+    overflow-x: scroll;
+    /* background-color: pink; */
+}
+
+.item {
+    border: 1px solid rgb(248, 99, 124);
+    margin-top: 50px;
+    text-align: center;
+    /* display: flex; 
+    justify-content: center;
+    align-items: center;*/
+    width: 40%;
+    min-width: 200px;
+    height: 80%;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    transition: ease-in-out 0.5s;
+    border-radius: 5px;
+    overflow-y: hidden;
+}
+
+.item:hover {
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+h3 {
+    font-weight: 500;
+    font-size: 15px;
+    padding: 15px 0;
+    text-transform: uppercase;
+}
+
+.vid-container {
+    width: 60%;
+    /* height: 70%; */
+    /* display: block; */
+    margin: 90px auto 100px;
+}
+
+
+/* 
+#video {
+    max-width: 350px;
+} */
+
+.vid-container>h3 {
+    font-size: 17px;
+    /* padding-right: 10px; */
+    /* float: left; */
+}
+
+#form {
+    padding-top: 100px;
+}
+
+.input-container {
+    width: 60%;
+    padding-bottom: 20px;
+    display: block;
+}
+
+label {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+input,
+textarea {
+    border: 1px solid rgb(248, 99, 124);
+    display: block;
+    width: 100%;
+    outline: none;
+}
+
+button {
+    padding: 20px;
+    background-color: black;
+    color: pink;
+    border-radius: 5px;
+    margin: 20px 0 70px 0;
+}
+
+button:hover {
+    color: black;
+    background-color: pink;
+    border: 2px solid rgb(248, 99, 124);
+    cursor: pointer;
+}
+
+@media(max-width:765px) {
+    .container {
+        overflow-x: hidden;
+    }
+    nav ul {
+        display: none;
+    }
+    /* .landing-page {
+    height: 100%;
+    } */
+    /* .about-pg {
+    flex-direction: column-reverse;
+    } */
+    .about {
+        width: 100%;
+        text-align: center;
+        margin-top: 10rem;
+    }
+    .about-img {
+        display: none;
+    }
+    h1,
+    h2 {
+        font-size: 25px;
+    }
+    .item-container {
+        display: block;
+        /* flex-direction: column-reverse; */
+        /* width: 100%; */
+        /* justify-content: center; */
+    }
+    .item,
+    .input-container {
+        margin: 20px auto;
+        /* overflow-x: hidden; */
+    }
+    .vid-container {
+        width: 80%;
+        /* margin: 100px auto; */
+    }
+    #video {
+        width: 90%;
+        height: 200px;
+    }
+    button {
+        display: block;
+        margin: 20px auto;
+    }
+}
